@@ -9,7 +9,7 @@ public class TireServiceImpl implements TireService {
     @Override
     public TireDto getTireById(UUID tireId) {
         return TireDto.builder().id(UUID.randomUUID())
-                .tireName("XGRIP4S")
+                .tireName("Super Tires")
                 .tireStyle("Passenger Tire")
                 .build();
     }

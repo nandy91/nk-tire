@@ -21,8 +21,8 @@ public class TireController {
         this.tireService = tireService;
     }
 
-    @GetMapping("/tireId")
-    public ResponseEntity<TireDto> getTire(@PathVariable UUID tireId) {
+    @GetMapping({"/{tireId}"})
+    public ResponseEntity<TireDto> getTire(@PathVariable("tireId") UUID tireId) {
         return new ResponseEntity<>(tireService.getTireById(tireId), HttpStatus.OK);
     }
 }
